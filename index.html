@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Template</title>
+    <title>Phan Thanh Bình - 12A2</title>
     <style>
         /* Core Reset & Modern Box Sizing */
         *, *::before, *::after {
@@ -12,8 +12,8 @@
             padding: 0;
         }
 
-        /* System Font Stack: Clean, highly legible, and loads instantly 
-           using the device's native premium fonts.
+        /* Fluid Typography & System Font Stack 
+           Loads instantly using the device's native premium fonts.
         */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -25,35 +25,52 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Main Container to keep content centered and readable */
+        /* Responsive Container 
+           Uses fluid widths for mobile, max-caps on PC, and keeps content centered.
+        */
         .container {
-            max-width: 800px;
+            width: 100%;
+            max-width: 700px; /* Slightly narrower for a tighter, cleaner look */
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 30px 20px;
+        }
+
+        /* CRITICAL FOR MOBILE: Fluid Images
+           Prevents 'upper.png' and 'lower.png' from overflowing on phone screens.
+        */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 24px auto; /* Centers the images and adds spacing */
+        }
+
+        /* Decorative horizontal line spacer */
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 24px 0;
         }
 
         /* Typography Styling Defaults */
         h1, h2, h3, h4, h5, h6 {
             color: #111111;
             font-weight: 700;
-            line-height: 1.25;
+            line-height: 1.4; /* Slightly more breathing room for text blocks */
             margin-bottom: 16px;
+            text-align: center; /* Centers the yearbook text nicely */
         }
 
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; margin-top: 32px; }
+        /* Mobile-first font sizes (scaled down for smaller displays) */
+        h1 { font-size: 1.6rem; }
         p { margin-bottom: 20px; }
 
-        /* Smooth transitions for interactive elements */
-        a {
-            color: #0066cc;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: #004499;
-            text-decoration: underline;
+        /* PC Specific Adjustments (Screens 768px and wider) */
+        @media (min-width: 768px) {
+            .container {
+                padding: 50px 20px;
+            }
+            h1 { font-size: 2.2rem; } /* Scales up beautifully on desktop */
         }
     </style>
 </head>
@@ -61,9 +78,13 @@
 
     <div class="container">
         <h1>helooo m, t ko bao giờ sẽ nghĩ là t sẽ làm một cái lưu bút kiểu này đâu:))</h1>
+        
         <hr>
+        
         <img src="upper.png" alt="khung chat">
+        
         <h1>Chúc m thi điểm tốt đậu NV1 FTU, luôn thuận lợi và thành công trên con đường của mình, luôn luôn giữ sức khỏe tốt và hạnh phúc như bây giờ</h1>
+        
         <img src="lower.png" alt="satoru gojo">
     </div>
 
